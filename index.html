@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seafoam Travel</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/main.css">  
+<style>
+
+</style>
+</head>
+<body>
+  
+  <nav>
+    <ul>
+      <button class="homeButton"><a href="index.html">SF</a></button>
+      <li class="spacing"><a href="index.html#Gallery">Destinations</a></li>
+      <li class="spacing"><a href="index.html#ContactUs">Contact Us</a></li>
+      <li class="spacing"><a href="register.html">Sign Up</a></li>
+      <li class="spacing"><a href="login.html">login</a></li>
+
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Seafoam Travel</h1>
+    <p>Ros&eacute; Destination Experts</p>
+    <div>
+      <button><a href="register.html">Sign Up Now!</a></button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <h1 id= "Gallery">Destinations</h1>
+    
+    <div class="gallery"></div>
+    
+
+    <h1 id="ContactUs">Contact Us</h1>
+
+  <form
+    action="branden.arthur13@gmail.com"
+    method="POST">
+    <label class="required">
+      Full Name:
+      <input type="text" id="fullName" name="fullName">
+    </label>
+    <label class="required">
+      Your Email:
+      <input type="email" id="mail" name="email">
+    </label>
+    <label>
+      Message:
+      <textarea name="message"></textarea>
+    </label>
+    <input type="submit" value="Send">
+  </form>
+
+  </main>
+
+  <footer>
+    <ul>
+      <li>&copy; 2020 Branden Arthur </li>
+      <li>(403)555-1234</li>
+      <li>123 Fake St. SE, Calgary, AB, A1B 2C3</li>
+    </ul>
+  </footer>
+
+  <script src="js/main.js">
+      const imgList = [1019, 1065, 1051, 1049, 1035]; 
+
+      let imgTemplate = ''; 
+
+      const gallery = document.querySelector('.gallery'); 
+
+      imgList.forEach(function(item){
+        console.log(item);
+
+        imgTemplate += `<img src="https://picsum.photos/id/${item}/250/250" alt="Destination">`;
+      });
+
+      // Add HTML img string to gallery container
+      gallery.innerHTML = imgTemplate;
+          
+  </script>
+
+</body>
+
+</html>
